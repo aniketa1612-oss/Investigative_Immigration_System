@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="1" stop-color="#edf4fa"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#17324d" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#315b7d"/>
+    </marker>
+    <style>
+      .title{font:700 38px 'Segoe UI',Arial,sans-serif;fill:#17324d}
+      .subtitle{font:400 18px 'Segoe UI',Arial,sans-serif;fill:#58728a}
+      .lane{font:700 20px 'Segoe UI',Arial,sans-serif;letter-spacing:1.5px;fill:#fff}
+      .node{font:600 19px 'Segoe UI',Arial,sans-serif;fill:#17324d;text-anchor:middle}
+      .small{font:400 15px 'Segoe UI',Arial,sans-serif;fill:#557086;text-anchor:middle}
+      .edge{fill:none;stroke:#315b7d;stroke-width:3;marker-end:url(#arrow)}
+      .context{fill:none;stroke:#7892a8;stroke-width:2.5;stroke-dasharray:8 7;marker-end:url(#arrow)}
+      .label{font:600 14px 'Segoe UI',Arial,sans-serif;fill:#315b7d;text-anchor:middle}
+    </style>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <text x="800" y="58" class="title" text-anchor="middle">Immigration Interview Assistant Data Flow</text>
+  <text x="800" y="90" class="subtitle" text-anchor="middle">Offline multilingual interview capture, processing, review and report generation</text>
+
+  <rect x="70" y="125" width="300" height="56" rx="12" fill="#254f70"/>
+  <rect x="470" y="125" width="500" height="56" rx="12" fill="#254f70"/>
+  <rect x="1070" y="125" width="460" height="56" rx="12" fill="#254f70"/>
+  <text x="220" y="160" class="lane">SOURCE</text>
+  <text x="720" y="160" class="lane">PROCESS</text>
+  <text x="1300" y="160" class="lane" style="font-size:14px;letter-spacing:0.4px">DATA STORE OR DESTINATION</text>
+
+  <!-- Row 1 -->
+  <g filter="url(#shadow)">
+    <rect x="90" y="220" width="260" height="86" rx="10" fill="#fff" stroke="#6e92ad" stroke-width="2"/>
+    <rect x="500" y="210" width="440" height="106" rx="28" fill="#e6f2fb" stroke="#39779f" stroke-width="2"/>
+    <path d="M1100 218 H1490 M1100 306 H1490 M1100 218 V306 M1490 218 V306" fill="#fff" stroke="#6e92ad" stroke-width="2"/>
+  </g>
+  <text x="220" y="263" class="node">Officer</text>
+  <text x="720" y="252" class="node">Create session and</text><text x="720" y="278" class="node">confirm consent</text>
+  <text x="1295" y="257" class="node">Interview record</text><text x="1295" y="281" class="small">Consent, mode, language and lifecycle</text>
+  <path d="M350 263 H500" class="edge"/><path d="M940 263 H1100" class="edge"/>
+
+  <!-- Row 2 -->
+  <g filter="url(#shadow)">
+    <rect x="90" y="360" width="260" height="86" rx="10" fill="#fff" stroke="#6e92ad" stroke-width="2"/>
+    <rect x="500" y="350" width="440" height="106" rx="28" fill="#e6f2fb" stroke="#39779f" stroke-width="2"/>
+    <path d="M1100 358 H1490 M1100 446 H1490 M1100 358 V446 M1490 358 V446" fill="#fff" stroke="#6e92ad" stroke-width="2"/>
+  </g>
+  <text x="220" y="395" class="node">Traveller or applicant</text><text x="220" y="421" class="small">Spoken answer</text>
+  <text x="720" y="392" class="node">Capture spoken response</text><text x="720" y="420" class="small">Short local recording segment</text>
+  <text x="1295" y="397" class="node">Temporary audio segment</text><text x="1295" y="421" class="small">Deleted after transcription</text>
+  <path d="M350 403 H500" class="edge"/><path d="M940 403 H1100" class="edge"/>
+
+  <!-- Row 3 -->
+  <g filter="url(#shadow)">
+    <rect x="90" y="500" width="260" height="86" rx="10" fill="#fff" stroke="#6e92ad" stroke-width="2"/>
+    <rect x="500" y="490" width="440" height="106" rx="28" fill="#e6f2fb" stroke="#39779f" stroke-width="2"/>
+    <path d="M1100 498 H1490 M1100 586 H1490 M1100 498 V586 M1490 498 V586" fill="#fff" stroke="#6e92ad" stroke-width="2"/>
+  </g>
+  <text x="220" y="535" class="node">Transcription service</text><text x="220" y="561" class="small">faster-whisper</text>
+  <text x="720" y="532" class="node">Convert speech to text</text><text x="720" y="560" class="small">Then delete temporary audio</text>
+  <text x="1295" y="537" class="node">Transcript table</text><text x="1295" y="561" class="small">Correctable timestamped text</text>
+  <path d="M1295 446 V470 H220 V500" class="context"/>
+  <path d="M350 543 H500" class="edge"/><path d="M940 543 H1100" class="edge"/>
+
+  <!-- Row 4 -->
+  <g filter="url(#shadow)">
+    <rect x="90" y="640" width="260" height="86" rx="10" fill="#fff" stroke="#6e92ad" stroke-width="2"/>
+    <rect x="500" y="630" width="440" height="106" rx="28" fill="#e6f2fb" stroke="#39779f" stroke-width="2"/>
+    <path d="M1100 638 H1490 M1100 726 H1490 M1100 638 V726 M1490 638 V726" fill="#fff" stroke="#6e92ad" stroke-width="2"/>
+  </g>
+  <text x="220" y="675" class="node">Browser vision module</text><text x="220" y="701" class="small">Local MediaPipe assets</text>
+  <text x="720" y="672" class="node">Measure visible facial movement</text><text x="720" y="700" class="small">No deception or credibility inference</text>
+  <text x="1295" y="677" class="node">Observation table</text><text x="1295" y="701" class="small">Timestamped movement features</text>
+  <path d="M350 683 H500" class="edge"/><path d="M940 683 H1100" class="edge"/>
+
+  <!-- Row 5 -->
+  <g filter="url(#shadow)">
+    <rect x="90" y="780" width="260" height="86" rx="10" fill="#fff" stroke="#6e92ad" stroke-width="2"/>
+    <rect x="500" y="770" width="440" height="106" rx="28" fill="#dcecf7" stroke="#2d698f" stroke-width="2.5"/>
+    <path d="M1100 778 H1490 M1100 866 H1490 M1100 778 V866 M1490 778 V866" fill="#fff" stroke="#6e92ad" stroke-width="2"/>
+  </g>
+  <text x="220" y="815" class="node">LLM service</text><text x="220" y="841" class="small">Qwen3 14B through Ollama</text>
+  <text x="720" y="812" class="node">Use objective and transcript context</text><text x="720" y="840" class="small">Generate neutral questions and draft report</text>
+  <text x="1295" y="817" class="node">Question and report tables</text><text x="1295" y="841" class="small">Structured, reviewable outputs</text>
+  <path d="M350 823 H500" class="edge"/><path d="M940 823 H1100" class="edge"/>
+  <path d="M1295 586 V610 H990 V792 H940" class="context"/>
+  <path d="M1295 726 V748 H1015 V810 H940" class="context"/>
+  <path d="M1295 306 V332 H985 V776 H940" class="context"/>
+
+  <!-- Final review strip -->
+  <g filter="url(#shadow)">
+    <rect x="430" y="915" width="390" height="58" rx="24" fill="#fff2d8" stroke="#b98228" stroke-width="2"/>
+    <path d="M970 919 H1440 M970 969 H1440 M970 919 V969 M1440 919 V969" fill="#fff" stroke="#b98228" stroke-width="2"/>
+  </g>
+  <text x="625" y="950" class="node">Officer reviews, corrects and exports</text>
+  <text x="1205" y="950" class="node">Local PDF report</text>
+  <path d="M1295 866 V892 H625 V915" class="edge"/>
+  <path d="M820 944 H970" class="edge"/>
+
+  <text x="80" y="982" class="subtitle">Solid arrows: primary data flow   •   Dashed arrows: context supplied to the LLM</text>
+</svg>

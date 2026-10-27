@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="920" viewBox="0 0 1600 920">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#315b7d"/></marker><style>.t{font:700 36px 'Segoe UI',Arial;fill:#17324d}.h{font:700 18px 'Segoe UI',Arial;fill:#fff;text-anchor:middle}.m{font:600 15px 'Segoe UI',Arial;fill:#17324d}.life{stroke:#8aa2b5;stroke-width:2;stroke-dasharray:8 7}.msg{stroke:#315b7d;stroke-width:2.4;fill:none;marker-end:url(#a)}.ret{stroke:#6d879c;stroke-width:2;stroke-dasharray:7 6;fill:none;marker-end:url(#a)}</style></defs>
+<rect width="1600" height="920" fill="#f8fbff"/><text x="800" y="50" class="t" text-anchor="middle">Immigration Interview Sequence Diagram</text>
+<g fill="#285a7e"><rect x="60" y="85" width="190" height="54" rx="8"/><rect x="330" y="85" width="190" height="54" rx="8"/><rect x="600" y="85" width="190" height="54" rx="8"/><rect x="870" y="85" width="190" height="54" rx="8"/><rect x="1140" y="85" width="190" height="54" rx="8"/><rect x="1380" y="85" width="170" height="54" rx="8"/></g>
+<text x="155" y="119" class="h">Officer</text><text x="425" y="119" class="h">React Frontend</text><text x="695" y="119" class="h">FastAPI Backend</text><text x="965" y="119" class="h">faster-whisper</text><text x="1235" y="119" class="h">SQLite</text><text x="1465" y="119" class="h">Ollama</text>
+<g class="life"><path d="M155 139V875"/><path d="M425 139V875"/><path d="M695 139V875"/><path d="M965 139V875"/><path d="M1235 139V875"/><path d="M1465 139V875"/></g>
+<path d="M155 185H425" class="msg"/><text x="270" y="176" class="m">Enter details and confirm consent</text>
+<path d="M425 230H695" class="msg"/><text x="500" y="221" class="m">POST create interview</text>
+<path d="M695 275H1235" class="msg"/><text x="845" y="266" class="m">Store interview record</text>
+<path d="M1235 320H695" class="ret"/><text x="930" y="311" class="m">Interview ID</text>
+<path d="M695 365H425" class="ret"/><text x="490" y="356" class="m">Session ready</text>
+<path d="M155 410H425" class="msg"/><text x="235" y="401" class="m">Start interview and record response</text>
+<path d="M425 455H695" class="msg"/><text x="480" y="446" class="m">Upload audio segment</text>
+<path d="M695 500H965" class="msg"/><text x="748" y="491" class="m">Transcribe locally</text>
+<path d="M965 545H695" class="ret"/><text x="750" y="536" class="m">Transcript text</text>
+<path d="M695 590H1235" class="msg"/><text x="850" y="581" class="m">Store transcript</text>
+<path d="M155 635H425" class="msg"/><text x="250" y="626" class="m">Request follow-up</text>
+<path d="M425 680H695" class="msg"/><text x="500" y="671" class="m">Generate question</text>
+<path d="M695 725H1465" class="msg"/><text x="950" y="716" class="m">Send bounded transcript context</text>
+<path d="M1465 770H695" class="ret"/><text x="960" y="761" class="m">Structured neutral question</text>
+<path d="M695 815H1235" class="msg"/><text x="870" y="806" class="m">Store question and report</text>
+<path d="M695 860H425" class="ret"/><text x="485" y="851" class="m">Return reviewable output</text>
+</svg>

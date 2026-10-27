@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#315b7d"/></marker><style>.t{font:700 34px 'Segoe UI',Arial;fill:#17324d}.h{font:700 22px 'Segoe UI',Arial;fill:#17324d}.n{font:600 18px 'Segoe UI',Arial;fill:#17324d;text-anchor:middle}.s{stroke:#315b7d;stroke-width:3;fill:none}.u{fill:#e7f2fa;stroke:#39779f;stroke-width:2.5}.p{stroke:#315b7d;stroke-width:2.5;fill:none}</style></defs>
+<rect width="1400" height="900" fill="#f8fbff"/><text x="700" y="52" class="t" text-anchor="middle">Immigration Interview Assistant Use Case Diagram</text>
+<rect x="250" y="90" width="900" height="750" rx="8" fill="#fff" stroke="#315b7d" stroke-width="3"/><text x="700" y="127" class="h" text-anchor="middle">AI Assisted Immigration Interview System</text>
+<!-- actors -->
+<g class="s"><circle cx="100" cy="320" r="25"/><path d="M100 345v90M55 380h90M100 435l-45 70M100 435l45 70"/><circle cx="1300" cy="280" r="25"/><path d="M1300 305v90M1255 340h90M1300 395l-45 70M1300 395l45 70"/><circle cx="1300" cy="650" r="25"/><path d="M1300 675v90M1255 710h90M1300 765l-45 70M1300 765l45 70"/></g>
+<text x="100" y="545" class="h" text-anchor="middle">Officer</text><text x="1300" y="500" class="h" text-anchor="middle">Traveller</text><text x="1300" y="865" class="h" text-anchor="middle">Local AI Services</text>
+<!-- cases -->
+<g class="u"><ellipse cx="500" cy="205" rx="175" ry="48"/><ellipse cx="900" cy="205" rx="175" ry="48"/><ellipse cx="500" cy="335" rx="175" ry="48"/><ellipse cx="900" cy="335" rx="175" ry="48"/><ellipse cx="500" cy="465" rx="175" ry="48"/><ellipse cx="900" cy="465" rx="175" ry="48"/><ellipse cx="500" cy="595" rx="175" ry="48"/><ellipse cx="900" cy="595" rx="175" ry="48"/><ellipse cx="700" cy="730" rx="210" ry="52"/></g>
+<text x="500" y="200" class="n">Create interview and</text><text x="500" y="224" class="n">confirm consent</text>
+<text x="900" y="200" class="n">Select setting and</text><text x="900" y="224" class="n">international language</text>
+<text x="500" y="330" class="n">Start, pause, resume</text><text x="500" y="354" class="n">or end interview</text>
+<text x="900" y="330" class="n">Provide spoken</text><text x="900" y="354" class="n">response</text>
+<text x="500" y="460" class="n">Review or correct</text><text x="500" y="484" class="n">transcript</text>
+<text x="900" y="460" class="n">Transcribe speech</text><text x="900" y="484" class="n">locally</text>
+<text x="500" y="590" class="n">Review suggested</text><text x="500" y="614" class="n">follow-up question</text>
+<text x="900" y="590" class="n">Generate neutral</text><text x="900" y="614" class="n">question</text>
+<text x="700" y="725" class="n">Generate, review and export</text><text x="700" y="749" class="n">structured report</text>
+<!-- associations -->
+<g class="p"><path d="M145 380L330 210"/><path d="M145 380L325 335"/><path d="M145 380L325 465"/><path d="M145 380L325 595"/><path d="M145 380L490 730"/><path d="M1275 320L1075 335"/><path d="M1275 320L1075 205"/><path d="M1255 710L1075 465"/><path d="M1255 710L1075 595"/><path d="M1255 710L910 730"/></g>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="920" viewBox="0 0 1600 920">
+<defs><marker id="diamond" viewBox="0 0 12 12" refX="1" refY="6" markerWidth="10" markerHeight="10" orient="auto"><path d="M1 6L6 1L11 6L6 11z" fill="#fff" stroke="#315b7d" stroke-width="1.5"/></marker><style>.t{font:700 36px 'Segoe UI',Arial;fill:#17324d}.cn{font:700 20px 'Segoe UI',Arial;fill:#fff;text-anchor:middle}.ct{font:500 16px 'Segoe UI',Arial;fill:#17324d}.rel{font:600 14px 'Segoe UI',Arial;fill:#315b7d}.box{fill:#fff;stroke:#315b7d;stroke-width:2.5}.head{fill:#285a7e}.line{stroke:#315b7d;stroke-width:2.5;fill:none}.dash{stroke:#7892a8;stroke-width:2.3;stroke-dasharray:8 6;fill:none}</style></defs>
+<rect width="1600" height="920" fill="#f8fbff"/><text x="800" y="52" class="t" text-anchor="middle">Immigration Interview Assistant Class Diagram</text>
+<!-- Interview -->
+<g><rect x="600" y="100" width="400" height="220" rx="8" class="box"/><rect x="600" y="100" width="400" height="48" rx="8" class="head"/><text x="800" y="131" class="cn">Interview</text><path d="M600 148h400M600 248h400" class="line"/><text x="620" y="177" class="ct">+ id: UUID</text><text x="620" y="202" class="ct">+ setting: InterviewSetting</text><text x="620" y="227" class="ct">+ language: String</text><text x="620" y="278" class="ct">+ start()</text><text x="620" y="303" class="ct">+ pause() / resume() / end()</text></g>
+<!-- Profile -->
+<g><rect x="70" y="110" width="360" height="180" rx="8" class="box"/><rect x="70" y="110" width="360" height="48" rx="8" class="head"/><text x="250" y="141" class="cn">IntervieweeProfile</text><path d="M70 158h360" class="line"/><text x="90" y="190" class="ct">+ fullName: String</text><text x="90" y="218" class="ct">+ documentReference: String</text><text x="90" y="246" class="ct">+ initialAccount: Text</text></g>
+<!-- Transcript -->
+<g><rect x="70" y="390" width="360" height="190" rx="8" class="box"/><rect x="70" y="390" width="360" height="48" rx="8" class="head"/><text x="250" y="421" class="cn">Transcript</text><path d="M70 438h360" class="line"/><text x="90" y="470" class="ct">+ speaker: String</text><text x="90" y="498" class="ct">+ text: Text</text><text x="90" y="526" class="ct">+ language: String</text><text x="90" y="554" class="ct">+ confidence: Float</text></g>
+<!-- Observation -->
+<g><rect x="70" y="670" width="360" height="175" rx="8" class="box"/><rect x="70" y="670" width="360" height="48" rx="8" class="head"/><text x="250" y="701" class="cn">BehaviouralObservation</text><path d="M70 718h360" class="line"/><text x="90" y="750" class="ct">+ timestamp: DateTime</text><text x="90" y="778" class="ct">+ observedMovement: Text</text><text x="90" y="806" class="ct">+ limitation: Text</text></g>
+<!-- Question -->
+<g><rect x="1170" y="390" width="360" height="190" rx="8" class="box"/><rect x="1170" y="390" width="360" height="48" rx="8" class="head"/><text x="1350" y="421" class="cn">Question</text><path d="M1170 438h360" class="line"/><text x="1190" y="470" class="ct">+ text: Text</text><text x="1190" y="498" class="ct">+ reason: Text</text><text x="1190" y="526" class="ct">+ strategy: String</text><text x="1190" y="554" class="ct">+ accepted: Boolean</text></g>
+<!-- Report -->
+<g><rect x="1170" y="670" width="360" height="175" rx="8" class="box"/><rect x="1170" y="670" width="360" height="48" rx="8" class="head"/><text x="1350" y="701" class="cn">InterviewReport</text><path d="M1170 718h360" class="line"/><text x="1190" y="750" class="ct">+ observations: Text</text><text x="1190" y="778" class="ct">+ recommendations: Text</text><text x="1190" y="806" class="ct">+ limitations: Text</text></g>
+<!-- LLM service -->
+<g><rect x="620" y="690" width="360" height="145" rx="8" class="box"/><rect x="620" y="690" width="360" height="48" rx="8" class="head"/><text x="800" y="721" class="cn">LocalLLMService</text><path d="M620 738h360" class="line"/><text x="640" y="770" class="ct">+ generateQuestion(context)</text><text x="640" y="800" class="ct">+ generateReport(context)</text></g>
+<!-- relationships -->
+<path d="M600 200H430" class="line" marker-start="url(#diamond)"/><text x="465" y="190" class="rel">1</text><text x="555" y="190" class="rel">1</text>
+<path d="M650 320V485H430" class="line" marker-start="url(#diamond)"/><text x="445" y="475" class="rel">0..*</text>
+<path d="M710 320V758H430" class="line" marker-start="url(#diamond)"/><text x="445" y="748" class="rel">0..*</text>
+<path d="M950 320V485H1170" class="line" marker-start="url(#diamond)"/><text x="1115" y="475" class="rel">0..*</text>
+<path d="M890 320V758H1170" class="line" marker-start="url(#diamond)"/><text x="1125" y="748" class="rel">0..1</text>
+<path d="M1170 535H1040V760H980" class="dash"/><path d="M1170 760H980" class="dash"/><text x="1035" y="745" class="rel">generates</text>
+</svg>

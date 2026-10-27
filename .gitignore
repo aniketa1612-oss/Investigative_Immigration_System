@@ -1,0 +1,21 @@
+# Local tooling and generated document previews
+.codex-tmp/
+.edge-render/
+report_build/
+conference_paper_build/
+
+# Secrets, runtime data, and dependency caches
+.env
+.env.*
+!.env.example
+.npm-cache/
+node_modules/
+.venv/
+__pycache__/
+.pytest_cache/
+dist/
+*.db
+*.db-shm
+*.db-wal
+*.log
+~$*
