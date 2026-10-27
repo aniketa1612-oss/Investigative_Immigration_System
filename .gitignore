@@ -1,3 +1,9 @@
+# Keep only the application and Git ignore configuration in the repository.
+/*
+!/.gitignore
+!/investigative-interview-assistant/
+*.md
+
 # Local tooling and generated document previews
 .codex-tmp/
 .edge-render/
